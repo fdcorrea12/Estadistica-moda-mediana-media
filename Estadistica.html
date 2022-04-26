@@ -6,27 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estaditica Basica</title>
     <link rel="stylesheet" href="./Estadistica.css">
-
 </head>
-<body>
-
+<body class="principal">
+    <div class="container">
     <h1 class="title">Estadistica Basica calcula la media, mediana, promedio</h1>
-
     <form class="form">
         <label for="numero">
             Escribe los datos que desea almacenar y generar la estadistica
         </label>
-        <input type="number" class="numero" />
-
-        <input type="button" value="Guardar dato" onclick=Capturar()>
-    
-        <button type="button" onclick="calcularPromedio()">Meadia Aritmetica</button>
-        <button type="button" onclick="moda()">Moda</button>
-        <button type="button" onclick="calcularPromedio()">Meadia Aritmetica</button>
+        <div>
+            <input type="number" class="numero" placeholder="Ingresa tus numeros uno a uno" />
+            <input type="button" value="Guardar dato" class="save" onclick=Capturar()>
+        </div>
+        <div class="botones">
+            <button type="button"  onclick="calcularPromedio()">Media Aritmetica</button>
+            <button type="button" onclick="moda()">Moda</button>
+            <button type="button" onclick="mediana()">Mediana Aritmetica</button>
+        </div>
     </form>
-
-    <p id="resultFinal"></p>
+    <p id="resultFinal" class="exit"></p>
     <script src="./Estadistica.js"></script>
-
+    </div>
 </body>
 </html>
